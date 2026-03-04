@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -179,6 +180,30 @@ color:var(--gold);
 margin-bottom:15px;
 }
 
+.value-text{
+text-align:left;
+font-size:15px;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+height:260px;
+object-fit:cover;
+transition:transform .3s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
 /* SCHEDULE */
 
 .schedule-table{
@@ -214,6 +239,24 @@ width:100%;
 border:none;
 }
 
+.social-links{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.social-links a{
+color:white;
+text-decoration:none;
+font-size:18px;
+}
+
+.social-links a:hover{
+color:var(--gold);
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
@@ -226,6 +269,10 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
 .hero h1{
 font-size:38px;
 }
@@ -234,6 +281,7 @@ font-size:38px;
 
 </style>
 </head>
+
 <body>
 
 <header>
@@ -247,16 +295,15 @@ font-size:38px;
 
 <nav>
 <ul>
-
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#schedule">Schedule</a></li>
 <li><a href="#join">Join</a></li>
-
 </ul>
 </nav>
 
 </div>
+
 </header>
 
 <!-- HERO -->
@@ -283,13 +330,9 @@ font-size:38px;
 
 <h2>About the Jaguars</h2>
 
-<p style="text-align:center;max-width:800px;margin:auto;margin-bottom:40px">
+<p style="text-align:center;max-width:900px;margin:auto;margin-bottom:50px">
 
-The Junction City Jaguars Rugby Club is a competitive rugby program based in Junction City, Kansas. Our club includes both a high school team and a men's team focused on developing players, building brotherhood, and growing the sport of rugby in our community.
-
-<br><br>
-
-Our mission is to foster an environment where men may learn, grow and succeed through hard work, sportsmanship and fellowship. We accomplish this by teaching the sport of Rugby.
+Our mission is to foster an environment where men may learn, grow and succeed through hard work, sportsmanship and fellowship. We accomplish this by teaching the sport of Rugby. We believe that the values and traditions of this sport are vital to the development of men today. We aspire to not only develop these men into great rugby players, but great leaders and members of society.
 
 </p>
 
@@ -297,10 +340,18 @@ Our mission is to foster an environment where men may learn, grow and succeed th
 
 <div class="card">
 
-<h3>High School Team</h3>
+<h3>High School Rugby Club</h3>
 
 <p>
-Our High School program welcomes players from Junction City, Abilene, Chapman and surrounding communities. No experience required.
+
+The Jaguars High School Rugby team is a club sport welcoming players from Junction City, Abilene, Chapman and surrounding communities. Because rugby operates as a club program, athletes from multiple schools are able to participate together.
+
+</p>
+
+<p>
+
+Our program introduces players to the fundamentals of rugby while emphasizing teamwork, leadership, discipline and physical fitness. Many athletes begin with no rugby experience and quickly develop into confident competitors while building strong friendships with teammates.
+
 </p>
 
 <p>
@@ -312,10 +363,18 @@ Practice: Monday, Wednesday, Friday<br>
 
 <div class="card">
 
-<h3>Men's Club</h3>
+<h3>Men's Rugby Club</h3>
 
 <p>
-Our Men's team builds brotherhood within the community through rugby and welcomes all adults looking for competition and camaraderie.
+
+The Jaguars Men's Rugby Club provides an opportunity for adults in the Junction City area to continue competing in rugby while building strong friendships through sport.
+
+</p>
+
+<p>
+
+Our club welcomes experienced rugby players, former athletes from other sports, and beginners interested in learning the game. The team focuses on competition, fitness, and building a strong brotherhood within the community.
+
 </p>
 
 <p>
@@ -346,27 +405,70 @@ Coach Nicola Capriotti
 
 <section>
 
-<h2>Our Values</h2>
+<h2>Our Core Values</h2>
 
 <div class="values-grid">
 
 <div>
+
 <div class="value-icon"><i class="fas fa-users"></i></div>
+
 <h3>Brotherhood</h3>
-<p>Supporting teammates on and off the field.</p>
+
+<p class="value-text">
+
+We believe that by teaching brotherhood we instill in our players a sense of service. With this sense of service these people learn to contribute and demonstrate that care, compassion and dedication to each other and their community will lead to enduring relationships both within the organization and the larger community around them.
+
+</p>
+
 </div>
 
 <div>
-<div class="value-icon"><i class="fas fa-fire"></i></div>
-<h3>Hustle</h3>
-<p>Relentless effort in training and competition.</p>
-</div>
 
-<div>
 <div class="value-icon"><i class="fas fa-shield-halved"></i></div>
+
 <h3>Integrity</h3>
-<p>Representing our club and community with honor.</p>
+
+<p class="value-text">
+
+We believe that honesty and forthrightness is vital to learning how to communicate and interact with the people in and around our lives. We hold ourselves to the standard of doing the right thing even when no one is around. We strive to say what we mean and do what we say.
+
+</p>
+
 </div>
+
+<div>
+
+<div class="value-icon"><i class="fas fa-fire"></i></div>
+
+<h3>Hustle</h3>
+
+<p class="value-text">
+
+We believe in the value of hard work, determination and perseverance. This value transcends sports. We teach our players that nothing in life that has value comes easy. We instill in our players the desire to achieve it and teach the skills to do it. We accomplish this by coach and peer mentoring.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section>
+
+<h2>Team Gallery</h2>
+
+<div class="gallery-grid">
+
+<img src="gallery1.jpg">
+<img src="gallery2.jpg">
+<img src="gallery3.jpg">
+<img src="gallery4.jpg">
+<img src="gallery5.jpg">
+<img src="gallery6.jpg">
 
 </div>
 
@@ -462,9 +564,19 @@ Coach Nicola Capriotti
 
 <div class="form-container">
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfDpBtQc8QbHF9GuDEnetc0tohmtw8V5psaNj1YDuxsLrLFhQ/viewform?embedded=true" height="2200">
-Loading…
-</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfDpBtQc8QbHF9GuDEnetc0tohmtw8V5psaNj1YDuxsLrLFhQ/viewform?embedded=true" height="2200"></iframe>
+
+</div>
+
+<div class="social-links">
+
+<a href="https://www.facebook.com/profile.php?id=61562676255690" target="_blank">
+<i class="fab fa-facebook"></i> Men's Team Facebook
+</a>
+
+<a href="https://www.facebook.com/profile.php?id=61571462923989" target="_blank">
+<i class="fab fa-facebook"></i> High School Facebook
+</a>
 
 </div>
 
