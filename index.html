@@ -8,6 +8,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
 /* =========================
@@ -30,11 +32,13 @@ margin:0;
 font-family:'Oswald', sans-serif;
 background:var(--dark);
 color:var(--white);
+line-height:1.6;
 }
 
-h1,h2,h3,h4{
-font-family:'Gagalin', sans-serif;
-letter-spacing:1px;
+section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
 }
 
 /* =========================
@@ -85,18 +89,13 @@ padding:0;
 
 nav a{
 text-decoration:none;
-color:var(--white);
+color:white;
 font-size:16px;
-transition:0.2s;
 }
 
 nav a:hover{
 color:var(--jaguar-gold);
 }
-
-/* =========================
-MOBILE MENU
-========================= */
 
 .hamburger{
 display:none;
@@ -108,7 +107,7 @@ gap:5px;
 .hamburger span{
 width:25px;
 height:3px;
-background:var(--white);
+background:white;
 }
 
 @media (max-width:768px){
@@ -118,7 +117,7 @@ position:absolute;
 top:70px;
 left:0;
 width:100%;
-background:var(--black);
+background:black;
 display:none;
 }
 
@@ -140,7 +139,7 @@ display:flex;
 }
 
 /* =========================
-HERO SECTION
+HERO
 ========================= */
 
 .hero{
@@ -184,51 +183,87 @@ margin-bottom:40px;
 color:var(--jaguar-gold);
 }
 
-.hero-buttons{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
+/* =========================
+SCHEDULE
+========================= */
+
+.schedule h2{
+font-size:40px;
+color:var(--jaguar-gold);
+margin-bottom:50px;
+text-align:center;
 }
 
-.hero-btn{
-padding:14px 28px;
-font-size:18px;
-border:none;
-cursor:pointer;
-text-decoration:none;
-color:white;
+.schedule-table{
+width:100%;
+border-collapse:collapse;
+margin-bottom:60px;
+}
+
+.schedule-table th{
 background:var(--jaguar-gold);
-transition:.2s;
+padding:12px;
 }
 
-.hero-btn:hover{
-background:#a28a4f;
-}
-
-.hero-btn.secondary{
-background:transparent;
-border:2px solid var(--jaguar-gold);
-}
-
-.hero-btn.secondary:hover{
-background:var(--jaguar-gold);
+.schedule-table td{
+padding:12px;
+border-bottom:1px solid #333;
 }
 
 /* =========================
-MOBILE HERO
+JOIN SECTION
 ========================= */
 
-@media (max-width:768px){
-
-.hero h1{
-font-size:38px;
+.join{
+text-align:center;
 }
 
-.hero h2{
-font-size:20px;
+.join h2{
+font-size:40px;
+color:var(--jaguar-gold);
+margin-bottom:20px;
 }
 
+.join p{
+max-width:800px;
+margin:auto;
+margin-bottom:40px;
+font-size:18px;
+}
+
+.form-container{
+max-width:900px;
+margin:auto;
+background:#1a1a1a;
+padding:20px;
+border-left:4px solid var(--jaguar-gold);
+}
+
+iframe{
+width:100%;
+border:none;
+}
+
+/* =========================
+SOCIAL LINKS
+========================= */
+
+.social-links{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.social-links a{
+color:white;
+text-decoration:none;
+font-size:18px;
+}
+
+.social-links a:hover{
+color:var(--jaguar-gold);
 }
 
 </style>
@@ -241,7 +276,7 @@ font-size:20px;
 <div class="nav-container">
 
 <div class="logo-area">
-<img src="logo.png" alt="Junction City Jaguars Rugby Logo">
+<img src="logo.png">
 <div class="logo-text">Junction City Jaguars Rugby</div>
 </div>
 
@@ -253,14 +288,12 @@ font-size:20px;
 
 <nav id="navMenu">
 <ul>
-
 <li><a href="#">Home</a></li>
 <li><a href="#">About</a></li>
 <li><a href="#">Schedule</a></li>
 <li><a href="#">Join</a></li>
 <li><a href="#">Sponsors</a></li>
 <li><a href="#">Contact</a></li>
-
 </ul>
 </nav>
 
@@ -268,26 +301,41 @@ font-size:20px;
 
 </header>
 
-<!-- HERO SECTION -->
+<!-- JOIN SECTION -->
 
-<section class="hero">
+<section class="join">
 
-<div class="hero-content">
+<h2>Join the Jaguars Rugby Club</h2>
 
-<h1>Junction City Jaguars Rugby</h1>
+<p>
+No experience required. Whether you're a high school athlete looking for a new challenge or an adult missing the competitive spirit of team sports, the Jaguars Rugby Club welcomes you.
+</p>
 
-<h2>Two Programs. One Brotherhood.<br>
-High School Team & Men's Club</h2>
+<p>
+High School players from Junction City, Abilene, Chapman and surrounding communities are encouraged to join. Our Men's team welcomes players of all experience levels who want to compete, train hard, and build brotherhood through rugby.
+</p>
 
-<div class="hero-buttons">
+<div class="form-container">
 
-<a class="hero-btn" href="#">High School Team</a>
-
-<a class="hero-btn secondary" href="#">Men's Team</a>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfDpBtQc8QbHF9GuDEnetc0tohmtw8V5psaNj1YDuxsLrLFhQ/viewform?embedded=true" height="2269">Loading…</iframe>
 
 </div>
 
+<div class="social-links">
+
+<a href="https://www.facebook.com/profile.php?id=61562676255690" target="_blank">
+<i class="fab fa-facebook"></i> Men's Team Facebook
+</a>
+
+<a href="https://www.facebook.com/profile.php?id=61571462923989" target="_blank">
+<i class="fab fa-facebook"></i> High School Facebook
+</a>
+
 </div>
+
+<p style="margin-top:30px">
+Contact us: <strong>junctioncityjaguars@gmail.com</strong>
+</p>
 
 </section>
 
