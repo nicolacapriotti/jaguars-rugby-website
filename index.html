@@ -143,6 +143,15 @@ section{
 max-width:1100px;
 margin:auto;
 padding:80px 20px;
+
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 h2{
@@ -220,6 +229,40 @@ padding:10px;
 .schedule-table td{
 border-bottom:1px solid #333;
 padding:10px;
+}
+
+/* SPONSORS */
+
+.sponsors{
+text-align:center;
+}
+
+.sponsor-banner{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+margin-top:30px;
+}
+
+.sponsor-card{
+background:#1a1a1a;
+border:2px solid var(--gold);
+width:220px;
+height:120px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.sponsor-card img{
+max-width:100%;
+max-height:90%;
+}
+
+.sponsor-placeholder{
+color:#888;
+font-size:14px;
 }
 
 /* JOIN */
@@ -445,7 +488,7 @@ We believe that honesty and forthrightness is vital to learning how to communica
 
 <p class="value-text">
 
-We believe in the value of hard work, determination and perseverance. This value transcends sports. We teach our players that nothing in life that has value comes easy. We instill in our players the desire to achieve it and teach the skills to do it. We accomplish this by coach and peer mentoring.
+We believe in the value of hard work, determination and perseverance. This value transcends sports.
 
 </p>
 
@@ -554,6 +597,39 @@ We believe in the value of hard work, determination and perseverance. This value
 
 </section>
 
+<!-- SPONSORS -->
+
+<section class="sponsors">
+
+<h2>Proud Sponsors of Jaguars Rugby</h2>
+
+<div class="sponsor-banner">
+
+<div class="sponsor-card">
+<img src="honor-logo.png">
+</div>
+
+<div class="sponsor-card sponsor-placeholder">
+Your Business Here
+</div>
+
+<div class="sponsor-card sponsor-placeholder">
+Your Business Here
+</div>
+
+<div class="sponsor-card sponsor-placeholder">
+Your Business Here
+</div>
+
+</div>
+
+<p style="margin-top:30px">
+Interested in sponsoring the Jaguars Rugby Club?<br>
+Contact: junctioncityjaguars@gmail.com
+</p>
+
+</section>
+
 <!-- JOIN -->
 
 <section id="join" class="join">
@@ -585,6 +661,24 @@ Contact: junctioncityjaguars@gmail.com
 </p>
 
 </section>
+
+<script>
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("visible");
+}
+});
+});
+
+sections.forEach(section=>{
+observer.observe(section);
+});
+
+</script>
 
 </body>
 </html>
