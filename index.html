@@ -10,20 +10,44 @@
 
 <style>
 
+/* =========================
+GLOBAL VARIABLES
+========================= */
+
+:root{
+--jaguar-gold:#857040;
+--black:#000;
+--dark:#111;
+--white:#ffffff;
+}
+
+/* =========================
+GLOBAL STYLES
+========================= */
+
 body{
 margin:0;
 font-family:'Oswald', sans-serif;
-background:#111;
-color:white;
+background:var(--dark);
+color:var(--white);
 }
+
+h1,h2,h3,h4{
+font-family:'Gagalin', sans-serif;
+letter-spacing:1px;
+}
+
+/* =========================
+NAVBAR
+========================= */
 
 header{
 position:sticky;
 top:0;
 width:100%;
-background:#000;
+background:var(--black);
 z-index:1000;
-border-bottom:3px solid #f2b705;
+border-bottom:3px solid var(--jaguar-gold);
 }
 
 .nav-container{
@@ -48,7 +72,7 @@ height:55px;
 .logo-text{
 font-size:20px;
 font-weight:500;
-color:#f2b705;
+color:var(--jaguar-gold);
 }
 
 nav ul{
@@ -61,14 +85,18 @@ padding:0;
 
 nav a{
 text-decoration:none;
-color:white;
+color:var(--white);
 font-size:16px;
 transition:0.2s;
 }
 
 nav a:hover{
-color:#f2b705;
+color:var(--jaguar-gold);
 }
+
+/* =========================
+MOBILE MENU
+========================= */
 
 .hamburger{
 display:none;
@@ -80,7 +108,7 @@ gap:5px;
 .hamburger span{
 width:25px;
 height:3px;
-background:white;
+background:var(--white);
 }
 
 @media (max-width:768px){
@@ -90,7 +118,7 @@ position:absolute;
 top:70px;
 left:0;
 width:100%;
-background:#000;
+background:var(--black);
 display:none;
 }
 
@@ -111,6 +139,98 @@ display:flex;
 
 }
 
+/* =========================
+HERO SECTION
+========================= */
+
+.hero{
+height:90vh;
+background-image:url('hero.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:10px;
+}
+
+.hero h2{
+font-size:28px;
+font-weight:400;
+margin-bottom:40px;
+color:var(--jaguar-gold);
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.hero-btn{
+padding:14px 28px;
+font-size:18px;
+border:none;
+cursor:pointer;
+text-decoration:none;
+color:white;
+background:var(--jaguar-gold);
+transition:.2s;
+}
+
+.hero-btn:hover{
+background:#a28a4f;
+}
+
+.hero-btn.secondary{
+background:transparent;
+border:2px solid var(--jaguar-gold);
+}
+
+.hero-btn.secondary:hover{
+background:var(--jaguar-gold);
+}
+
+/* =========================
+MOBILE HERO
+========================= */
+
+@media (max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.hero h2{
+font-size:20px;
+}
+
+}
+
 </style>
 
 </head>
@@ -121,7 +241,7 @@ display:flex;
 <div class="nav-container">
 
 <div class="logo-area">
-<img src="logo.png">
+<img src="logo.png" alt="Junction City Jaguars Rugby Logo">
 <div class="logo-text">Junction City Jaguars Rugby</div>
 </div>
 
@@ -147,6 +267,29 @@ display:flex;
 </div>
 
 </header>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Junction City Jaguars Rugby</h1>
+
+<h2>Two Programs. One Brotherhood.<br>
+High School Team & Men's Club</h2>
+
+<div class="hero-buttons">
+
+<a class="hero-btn" href="#">High School Team</a>
+
+<a class="hero-btn secondary" href="#">Men's Team</a>
+
+</div>
+
+</div>
+
+</section>
 
 <script>
 
